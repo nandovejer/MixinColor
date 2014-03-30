@@ -1,6 +1,6 @@
 # MIXIN BACKGROUND COLOR 
 
-[DEMO](index.html)
+[DEMO](http://codepen.io/Silencespainter/full/duDHe/)
 
 
 ```SASS
