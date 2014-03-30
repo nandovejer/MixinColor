@@ -1,0 +1,52 @@
+
+body {
+	font-size: 18px;
+	font-family:  Segoe UI, Roboto, Ubuntu, Helvetica,  sans-serif; 
+	font-weight: 400;
+	text-align:center;
+	background: linear-gradient(30deg, #CCC , #FFF, #CCC );
+	background-size: 5px;
+}
+
+h1 {
+	font-size: 3em;
+	
+}
+
+
+pre {
+	background-color: #FFF;
+	font-size: .75em;
+	padding: 1em;
+	max-width: 924px;
+	margin:0 auto;
+	box-shadow: 0px 0px 1px #000;
+	display: block;
+	text-align:left;
+	font-family: console;
+}
+
+
+footer {
+	width: 100%;
+	display: inline-block;
+	margin-top: 1.25em;
+}
+
+.box {
+	margin: 0 auto;
+		margin-bottom: 1em;
+	max-width: 1024px;
+	text-align: center;
+	display:block;
+	border: 1px solid #CCC;
+	@include bg-color($main-color, $opacity-color, $mode-color, $x100-color);
+
+	&::before {
+		width:100%;
+		content: " @include bg-color( " + $main-color "," + $opacity-color "," + $mode-color+ "," + $x100-color + "); " ;
+		font-size: 1.75em;
+		line-height: 2em;
+	}
+}
+

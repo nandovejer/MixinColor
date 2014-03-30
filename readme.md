@@ -1,0 +1,36 @@
+# MIXIN BACKGROUND COLOR 
+
+[DEMO](index.html)
+
+
+```SASS
+////// MIXIN BACKGROUND COLOR BY @SILENCESPAINTER
+@mixin bg-color($main-color, $opacity-color, $mode-color, $x100-color) {	
+
+  @if $mode-color == normal {
+  	// mode-choice = normal
+    background:rgba($main-color, $opacity-color);
+
+  } @else if $mode-color == dark {
+    // mode-choice = dark
+	background:rgba( (darken($main-color,$x100-color)), $opacity-color);
+
+  } @else if $mode-color == light {
+    // mode-choice = light
+	background:rgba( (lighten($main-color,$x100-color)), $opacity-color);
+
+  } @else {
+  	// mode-choice = if there is syntax mistake
+    &::before {
+    	content: "Error @mixin bg-color, the $mode-color must be lowercase: normal, light or dark";
+    	font-size: 3.5em;
+    	color: white;
+    	background: red;
+    	display: inline-block;
+    	height: inherit;
+    	margin: 0 auto;
+    }
+  }	
+
+} 
+```
